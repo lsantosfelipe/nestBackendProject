@@ -1,0 +1,138 @@
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "email": "admin@example.com",
+  "password": "senhaSegura",
+  "insUser": 1,
+  "updUser": 1,
+  "type": 1
+}
+
+### 1. Login de autenticação de usuários
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+  "email": "usuario@teste.com",
+  "password": "senhaSegura"
+}
+
+### 2. Criação de novo usuário
+POST http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzdWFyaW9AdGVzdGUuY29tIiwic3ViIjoxLCJpYXQiOjE3Mjg2ODY3MzQsImV4cCI6MTcyODc3MzEzNH0.tcrtCYxVA5WEPhwIwVhJSOFzMoOiM17ZXxXtpvYjTN8
+Content-Type: application/json
+
+{
+  "username": "Usuario Teste",
+  "email": "usuario@teste.com",
+  "password": "senhaSegura",
+  "insUser": 2,
+  "updUser": 2,
+  "type": 2
+}
+
+### 3. Buscar usuário por ID
+GET http://localhost:3000/users/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzdWFyaW9AdGVzdGUuY29tIiwic3ViIjoxLCJpYXQiOjE3Mjg2ODY3MzQsImV4cCI6MTcyODc3MzEzNH0.tcrtCYxVA5WEPhwIwVhJSOFzMoOiM17ZXxXtpvYjTN8
+
+### 4. Atualizar dados de um usuário
+PUT http://localhost:3000/users/5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzdWFyaW9AdGVzdGUuY29tIiwic3ViIjoxLCJpYXQiOjE3Mjg2ODY3MzQsImV4cCI6MTcyODc3MzEzNH0.tcrtCYxVA5WEPhwIwVhJSOFzMoOiM17ZXxXtpvYjTN8
+Content-Type: application/json
+
+{
+  "username": "Usuario Atualizado",
+  "email": "atualizado@usuario.com"
+}
+
+### 5. Excluir um usuário
+DELETE http://localhost:3000/users/5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzdWFyaW9AdGVzdGUuY29tIiwic3ViIjoxLCJpYXQiOjE3Mjg2ODY3MzQsImV4cCI6MTcyODc3MzEzNH0.tcrtCYxVA5WEPhwIwVhJSOFzMoOiM17ZXxXtpvYjTN8
+
+### 6. Alterar senha de um usuário pelo id
+POST http://localhost:3000/users/password/1 
+Content-Type: application/json
+
+{
+  "password": "senhaSegura"
+}
+
+### 7. Buscar todos os usuários
+GET http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzdWFyaW9AdGVzdGUuY29tIiwic3ViIjoxLCJpYXQiOjE3Mjg2ODY3MzQsImV4cCI6MTcyODc3MzEzNH0.tcrtCYxVA5WEPhwIwVhJSOFzMoOiM17ZXxXtpvYjTN8
+
+### 8. Criar novo produto
+POST http://localhost:3000/products
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzdWFyaW9AdGVzdGUuY29tIiwic3ViIjoxLCJpYXQiOjE3Mjg2ODY3MzQsImV4cCI6MTcyODc3MzEzNH0.tcrtCYxVA5WEPhwIwVhJSOFzMoOiM17ZXxXtpvYjTN8
+
+{
+  "ean": "1234567890123",
+  "name": "Produto Teste",
+  "idCategory": 3,
+  "insUser": 1,
+  "updUser": 1
+}
+
+### 9. Buscar produto por ID
+GET http://localhost:3000/products/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzdWFyaW9AdGVzdGUuY29tIiwic3ViIjoxLCJpYXQiOjE3Mjg2ODY3MzQsImV4cCI6MTcyODc3MzEzNH0.tcrtCYxVA5WEPhwIwVhJSOFzMoOiM17ZXxXtpvYjTN8
+
+### 10. Buscar todos os produtos
+GET http://localhost:3000/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzdWFyaW9AdGVzdGUuY29tIiwic3ViIjoxLCJpYXQiOjE3Mjg2ODY3MzQsImV4cCI6MTcyODc3MzEzNH0.tcrtCYxVA5WEPhwIwVhJSOFzMoOiM17ZXxXtpvYjTN8
+
+### 11. Atualizar produto por ID
+PUT http://localhost:3000/products/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzdWFyaW9AdGVzdGUuY29tIiwic3ViIjoxLCJpYXQiOjE3Mjg2ODY3MzQsImV4cCI6MTcyODc3MzEzNH0.tcrtCYxVA5WEPhwIwVhJSOFzMoOiM17ZXxXtpvYjTN8
+Content-Type: application/json
+
+{
+  "ean": "1234567890123",
+  "name": "Produto Atualizado",
+  "idCategory": 1,
+  "insUser": 1,
+  "updUser": 1
+}
+
+### 12. Excluir produto
+DELETE http://localhost:3000/products/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzdWFyaW9AdGVzdGUuY29tIiwic3ViIjoxLCJpYXQiOjE3Mjg2ODY3MzQsImV4cCI6MTcyODc3MzEzNH0.tcrtCYxVA5WEPhwIwVhJSOFzMoOiM17ZXxXtpvYjTN8
+
+### 13. Criar nova categoria de produto
+POST http://localhost:3000/categories
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzdWFyaW9AdGVzdGUuY29tIiwic3ViIjoxLCJpYXQiOjE3Mjg2ODY3MzQsImV4cCI6MTcyODc3MzEzNH0.tcrtCYxVA5WEPhwIwVhJSOFzMoOiM17ZXxXtpvYjTN8
+Content-Type: application/json
+
+{
+  "name": "Nova Categoria"
+}
+### 14. Buscar categoria por ID
+GET http://localhost:3000/categories/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzdWFyaW9AdGVzdGUuY29tIiwic3ViIjoxLCJpYXQiOjE3Mjg2ODY3MzQsImV4cCI6MTcyODc3MzEzNH0.tcrtCYxVA5WEPhwIwVhJSOFzMoOiM17ZXxXtpvYjTN8
+
+### 15. Buscar todas as categorias
+GET http://localhost:3000/categories
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzdWFyaW9AdGVzdGUuY29tIiwic3ViIjoxLCJpYXQiOjE3Mjg2ODY3MzQsImV4cCI6MTcyODc3MzEzNH0.tcrtCYxVA5WEPhwIwVhJSOFzMoOiM17ZXxXtpvYjTN8
+
+### 16. Atualizar categoria por ID
+PUT http://localhost:3000/categories/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzdWFyaW9AdGVzdGUuY29tIiwic3ViIjoxLCJpYXQiOjE3Mjg2ODY3MzQsImV4cCI6MTcyODc3MzEzNH0.tcrtCYxVA5WEPhwIwVhJSOFzMoOiM17ZXxXtpvYjTN8
+Content-Type: application/json
+
+{
+  "name": "Nova Categoria",
+  "products": [
+    {
+      "ean": "1234567890123",
+      "name": "Produto Atualizado 1",
+      "idCategory": 1 
+    }
+  ]
+}
+
+### 17. Excluir categoria
+DELETE http://localhost:3000/categories/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzdWFyaW9AdGVzdGUuY29tIiwic3ViIjoxLCJpYXQiOjE3Mjg2ODY3MzQsImV4cCI6MTcyODc3MzEzNH0.tcrtCYxVA5WEPhwIwVhJSOFzMoOiM17ZXxXtpvYjTN8
