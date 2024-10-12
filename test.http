@@ -1,14 +1,4 @@
-POST http://localhost:3000/users
-Content-Type: application/json
-
-{
-  "username": "Admin",
-  "email": "admin@example.com",
-  "password": "senhaSegura",
-  "insUser": 1,
-  "updUser": 1,
-  "type": 1
-}
+#### Teste de API
 
 ### 1. Login de autenticação de usuários
 POST http://localhost:3000/users/login
@@ -109,6 +99,7 @@ Content-Type: application/json
 {
   "name": "Nova Categoria"
 }
+
 ### 14. Buscar categoria por ID
 GET http://localhost:3000/categories/3
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzdWFyaW9AdGVzdGUuY29tIiwic3ViIjoxLCJpYXQiOjE3Mjg2ODY3MzQsImV4cCI6MTcyODc3MzEzNH0.tcrtCYxVA5WEPhwIwVhJSOFzMoOiM17ZXxXtpvYjTN8
