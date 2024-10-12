@@ -24,39 +24,32 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Projeto backend usando o framework NestJS, com código fonte em TypeScript, e ORM Prisma. Foi configurado utilizando uma instancia local do 
+MySQL Workbench versão 8.0, além disso foi utilizada a extensão REST API Cliente do Visual Studio Code para teste da implementação das rotas.
 
 ## Project setup
 
+
+INSTRUÇÕES PARA EXECUTAR O PROJETO
+Clone o repositório:
 ```bash
-$ npm install
+git clone https://github.com/lsantosfelipe/nestBackendProject.git
+cd nestBackendProject
+```
+Instale as dependências:
+```bash
+npm install
 ```
 
-## Compile and run the project
+Configure o Banco de Dados:
+Certifique que seu banco de dados está configurado corretamente. O projeto pode estar configurado para usar um banco de dados PostgreSQL,
+verifique no arquivo .env se está configurado para MySQL WorkBench.
 
+Inicie o Servidor:
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+npm run start
 ```
-
-## Run tests
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
+Através do endereço "http://localhost:3000" acesse a API Client para fazer o teste das rotas.
 
 ## Resources
 

@@ -36,14 +36,8 @@ export class UsersService {
     if (!isPasswordValid) {
       throw new UnauthorizedException('E-mail e/ou senha incorretos, verifique e tente novamente');
     }
-    
-    return { 
-      id: user.id, 
-      username: user.username, 
-      type: user.type, 
-      token: this.jwtService.sign({ email: user.email, sub: user.id }) 
-    };
-}
+    return { token: this.jwtService.sign({ email: user.email, sub: user.id }) };
+  }
 
   /**
    * Cria um novo usuário com base nos dados fornecidos.
